@@ -20,8 +20,10 @@ while True:
         break
     elif guess>rand_number:
         print("The guess is too high!")
-        end_nr=guess
+        if end_nr > guess:
+            end_nr=guess
     else:
         print("The guess is too low!")
-        start_nr=guess
+        if start_nr < guess:
+            start_nr=guess
 
